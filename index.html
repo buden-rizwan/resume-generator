@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Resume Generator</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Resume Generator</h1>
+
+      <label>Template</label>
+      <select id="template">
+        <option value="modern">Modern</option>
+        <option value="classic">Classic</option>
+        <option value="minimal">Minimal</option>
+      </select>
+
+      <label>First Name</label>
+      <input id="firstName" />
+
+      <label>Last Name</label>
+      <input id="lastName" />
+
+      <label>Phone</label>
+      <input id="phone" />
+
+      <label>Email</label>
+      <input id="email" />
+
+      <label>Upload Photo (optional)</label>
+      <input type="file" id="photo" accept="image/*" />
+      <label>Primary Technical Skills (comma separated)</label>
+      <input id="skills" />
+
+      <label>Experience (write sentences separated by line breaks)</label>
+      <textarea id="experience" rows="5"></textarea>
+
+      <label>Education (optional)</label>
+      <textarea id="education" rows="3"></textarea>
+
+      <button onclick="generateResume()">Generate Resume</button>
+      <button onclick="downloadPDF()">Download PDF</button>
+
+      <div id="preview" class="preview"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
